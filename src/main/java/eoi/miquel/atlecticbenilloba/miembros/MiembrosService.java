@@ -14,7 +14,7 @@ import lombok.RequiredArgsConstructor;
 public class MiembrosService {
     private final MiembrosRepository miembrosRepository;
 
-    public List<Miembro> getAll() {
+    public List<Miembro> getMiembros() {
         return (List<Miembro>) miembrosRepository.findAll();
     }
 

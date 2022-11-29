@@ -4,6 +4,7 @@ package eoi.miquel.atlecticbenilloba.miembros;
 import java.util.List;
 
 import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -19,13 +20,14 @@ import lombok.RequiredArgsConstructor;
 @RestController
 @RequestMapping("/miembros")
 @RequiredArgsConstructor
+@CrossOrigin(origins = "*")
 public class MiembrosController {
     
     private final MiembrosService miembrosService;
     
     @GetMapping
-    public List<Miembro> getAll() {
-        return miembrosService.getAll();
+    public List<Miembro> getMiembros() {
+        return miembrosService.getMiembros();
     }
 
     @GetMapping("/{id}")
