@@ -25,7 +25,7 @@ public class MiembrosController {
     
     @GetMapping
     public List<Miembro> getAll() {
-            return (List<Miembro>)miembrosService.getAll();
+        return miembrosService.getAll();
     }
 
     @GetMapping("/{id}")
